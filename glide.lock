@@ -1,12 +1,10 @@
-hash: b7dc197ea326f68c4fe348be89e812f6af3ca3587804324b41e67a492b62afb3
-updated: 2019-01-30T23:11:06.092475+01:00
+hash: caac5ff7632a5ac7da3fc5aa82ff1f7f43e8315a316c1e35db47fad9fb6c90fe
+updated: 2019-01-31T13:36:04.42528+01:00
 imports:
 - name: github.com/aokoli/goutils
   version: 41ac8693c5c10a92ea1ff5ac3a7f95646f6123b0
 - name: github.com/BurntSushi/toml
   version: 3012a1dbe2e4bd1391d42b32f0577cb7bbc7f005
-- name: github.com/d4l3k/messagediff
-  version: b9e99b2f9263a86c71c1ca4507f34502448c58a4
 - name: github.com/docker/spdystream
   version: 449fdfce4d962303d702fec724ef0ad181c92528
   subpackages:
@@ -15,6 +13,8 @@ imports:
   version: 36442dbdb585210f8d5a1b45e67aa323c197d5c4
 - name: github.com/ghodss/yaml
   version: 73d445a93680fa1a78ae23a5839bad48f32ba1ee
+- name: github.com/go-test/deep
+  version: 042da051cf3189d80f667339b822c7effac29cd6
 - name: github.com/gobwas/glob
   version: 5ccd90ef52e1e632236f7326478d4faa74f99438
   subpackages:
@@ -78,6 +78,8 @@ imports:
   version: c439c4fa093711d42e1b01acb1235b52004753c1
 - name: github.com/spf13/pflag
   version: 583c0c0531f06d5278b7d917446061adc344b5cd
+- name: github.com/stretchr/objx
+  version: ef50b0de28773081167c97fc27cf29a0bf8b8c71
 - name: golang.org/x/crypto
   version: de0752318171da717af4ce24d0a2e8626afaeb11
   subpackages:
@@ -88,15 +90,12 @@ imports:
   version: 0ed95abb35c445290478a5348a7b38bb154135fd
   subpackages:
   - context
-  - html
-  - html/atom
   - http2
   - http2/hpack
   - idna
   - internal/timeseries
   - lex/httplex
   - trace
-  - websocket
 - name: golang.org/x/oauth2
   version: a6bd8cefa1811bd24b86f8902872e4e8225f74c4
   subpackages:
@@ -198,8 +197,10 @@ imports:
 - name: k8s.io/apimachinery
   version: 49ce2735e5074ffc3f8190c8406cf51a96302dad
   subpackages:
+  - pkg/api/equality
   - pkg/api/errors
   - pkg/api/meta
+  - pkg/api/meta/testrestmapper
   - pkg/api/resource
   - pkg/apis/meta/v1
   - pkg/apis/meta/v1/unstructured
