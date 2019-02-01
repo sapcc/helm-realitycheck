@@ -1,2 +1,2 @@
 build:
-	go build -o bin/helm-realitycheck
+	go build -v -o bin/helm-realitycheck
