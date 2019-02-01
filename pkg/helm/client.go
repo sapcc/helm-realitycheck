@@ -9,7 +9,7 @@ import (
 	"k8s.io/client-go/rest"
 	"k8s.io/helm/pkg/helm"
 
-	"github.com/sapcc/helm-realitycheck/helm/portforwarder"
+	"github.com/sapcc/helm-realitycheck/pkg/helm/portforwarder"
 )
 
 type Client struct {

@@ -1,10 +1,14 @@
 hash: caac5ff7632a5ac7da3fc5aa82ff1f7f43e8315a316c1e35db47fad9fb6c90fe
-updated: 2019-01-31T13:36:04.42528+01:00
+updated: 2019-02-01T14:18:45.165364+01:00
 imports:
 - name: github.com/aokoli/goutils
   version: 41ac8693c5c10a92ea1ff5ac3a7f95646f6123b0
 - name: github.com/BurntSushi/toml
   version: 3012a1dbe2e4bd1391d42b32f0577cb7bbc7f005
+- name: github.com/davecgh/go-spew
+  version: 782f4967f2dc4564575ca782fe2d04090b5faca8
+  subpackages:
+  - spew
 - name: github.com/docker/spdystream
   version: 449fdfce4d962303d702fec724ef0ad181c92528
   subpackages:
@@ -56,6 +60,10 @@ imports:
   version: 787624de3eb7bd915c329cba748687a3b22666a6
   subpackages:
   - diskcache
+- name: github.com/hashicorp/golang-lru
+  version: a0d98a5f288019575c6d1f4bb1573fef2d1fcdc4
+  subpackages:
+  - simplelru
 - name: github.com/huandu/xstrings
   version: f02667b379e2fb5916c3cda2cf31e0eb885d79f8
 - name: github.com/imdario/mergo
@@ -78,8 +86,6 @@ imports:
   version: c439c4fa093711d42e1b01acb1235b52004753c1
 - name: github.com/spf13/pflag
   version: 583c0c0531f06d5278b7d917446061adc344b5cd
-- name: github.com/stretchr/objx
-  version: ef50b0de28773081167c97fc27cf29a0bf8b8c71
 - name: golang.org/x/crypto
   version: de0752318171da717af4ce24d0a2e8626afaeb11
   subpackages:
@@ -90,12 +96,15 @@ imports:
   version: 0ed95abb35c445290478a5348a7b38bb154135fd
   subpackages:
   - context
+  - html
+  - html/atom
   - http2
   - http2/hpack
   - idna
   - internal/timeseries
   - lex/httplex
   - trace
+  - websocket
 - name: golang.org/x/oauth2
   version: a6bd8cefa1811bd24b86f8902872e4e8225f74c4
   subpackages:
@@ -197,11 +206,10 @@ imports:
 - name: k8s.io/apimachinery
   version: 49ce2735e5074ffc3f8190c8406cf51a96302dad
   subpackages:
-  - pkg/api/equality
   - pkg/api/errors
   - pkg/api/meta
-  - pkg/api/meta/testrestmapper
   - pkg/api/resource
+  - pkg/apis/meta/internalversion
   - pkg/apis/meta/v1
   - pkg/apis/meta/v1/unstructured
   - pkg/apis/meta/v1/unstructured/unstructuredscheme
@@ -220,7 +228,9 @@ imports:
   - pkg/runtime/serializer/versioning
   - pkg/selection
   - pkg/types
+  - pkg/util/cache
   - pkg/util/clock
+  - pkg/util/diff
   - pkg/util/errors
   - pkg/util/framer
   - pkg/util/httpstream
@@ -233,6 +243,7 @@ imports:
   - pkg/util/sets
   - pkg/util/validation
   - pkg/util/validation/field
+  - pkg/util/wait
   - pkg/util/yaml
   - pkg/version
   - pkg/watch
@@ -250,6 +261,8 @@ imports:
   version: 02f343fb27038ed2f570c9ecb2484fb11f2a59a9
   subpackages:
   - discovery
+  - informers/core/v1
+  - informers/internalinterfaces
   - kubernetes
   - kubernetes/scheme
   - kubernetes/typed/admissionregistration/v1alpha1
@@ -283,6 +296,7 @@ imports:
   - kubernetes/typed/storage/v1
   - kubernetes/typed/storage/v1alpha1
   - kubernetes/typed/storage/v1beta1
+  - listers/core/v1
   - pkg/apis/clientauthentication
   - pkg/apis/clientauthentication/v1alpha1
   - pkg/apis/clientauthentication/v1beta1
@@ -294,21 +308,25 @@ imports:
   - restmapper
   - third_party/forked/golang/template
   - tools/auth
+  - tools/cache
   - tools/clientcmd
   - tools/clientcmd/api
   - tools/clientcmd/api/latest
   - tools/clientcmd/api/v1
   - tools/metrics
+  - tools/pager
   - tools/portforward
   - tools/reference
   - transport
   - transport/spdy
+  - util/buffer
   - util/cert
   - util/connrotation
   - util/flowcontrol
   - util/homedir
   - util/integer
   - util/jsonpath
+  - util/retry
   - util/testing
 - name: k8s.io/helm
   version: 2e55dbe1fdb5fdb96b75ff144a339489417b146b
