@@ -1,5 +1,5 @@
-hash: b7dc197ea326f68c4fe348be89e812f6af3ca3587804324b41e67a492b62afb3
-updated: 2019-01-30T23:11:06.092475+01:00
+hash: caac5ff7632a5ac7da3fc5aa82ff1f7f43e8315a316c1e35db47fad9fb6c90fe
+updated: 2019-02-01T11:12:47.779637+01:00
 imports:
 - name: github.com/aokoli/goutils
   version: 41ac8693c5c10a92ea1ff5ac3a7f95646f6123b0
@@ -88,15 +88,12 @@ imports:
   version: 0ed95abb35c445290478a5348a7b38bb154135fd
   subpackages:
   - context
-  - html
-  - html/atom
   - http2
   - http2/hpack
   - idna
   - internal/timeseries
   - lex/httplex
   - trace
-  - websocket
 - name: golang.org/x/oauth2
   version: a6bd8cefa1811bd24b86f8902872e4e8225f74c4
   subpackages:
@@ -198,9 +195,14 @@ imports:
 - name: k8s.io/apimachinery
   version: 49ce2735e5074ffc3f8190c8406cf51a96302dad
   subpackages:
+  - pkg/api/apitesting
+  - pkg/api/apitesting/fuzzer
+  - pkg/api/apitesting/roundtrip
+  - pkg/api/equality
   - pkg/api/errors
   - pkg/api/meta
   - pkg/api/resource
+  - pkg/apis/meta/fuzzer
   - pkg/apis/meta/v1
   - pkg/apis/meta/v1/unstructured
   - pkg/apis/meta/v1/unstructured/unstructuredscheme
@@ -220,6 +222,7 @@ imports:
   - pkg/selection
   - pkg/types
   - pkg/util/clock
+  - pkg/util/diff
   - pkg/util/errors
   - pkg/util/framer
   - pkg/util/httpstream
